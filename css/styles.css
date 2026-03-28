@@ -571,6 +571,11 @@ section > h2 {
     color: var(--accent);
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 main > p {
     padding: 1rem 5%;
 }

@@ -157,8 +157,8 @@ project/
 ├── images/
 │   ├── hero.jpg
 │   ├── work1.jpg … work6.jpg
-│   ├── video-thumb1.jpg
-│   └── video-thumb2.jpg
+│   ├── video-thumb1.png
+│   └── video-thumb2.png
 ├── media/
 │   ├── sample1.mp4
 │   ├── sample2.mp4

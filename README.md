@@ -1,44 +1,71 @@
-# Media Production Website Starter Code
+# Media Production Website
+## Overview
+This project is a multi-page responsive website for a fictional Media Production Company. The purpose of the site is to present the company’s services, showcase media content (video and audio), provide company information, and allow visitors to contact the business through a structured form.
 
-This is the starter codebase for your media production website project. The code is approximately 70% complete but contains errors, omissions, and areas that need significant improvement.
+The website includes four pages:
 
 ## What's Included
 
-- `index.html` - Home page (incomplete, semantic issues)
-- `about.html` - About/Services page (incomplete, missing flexbox/grid layouts)
-- `media.html` - Media gallery page (incomplete, missing media elements)
-- `contact.html` - Contact page (incomplete form with validation issues)
-- `css/styles.css` - Stylesheet (incomplete, missing advanced features)
-- `images/` folder - Placeholder folder for your images
-- `media/` folder - Placeholder folder for video/audio files
+- `Home(index.html)` - Introduction and hero section describing the company.
+- `About (about.html)` – Information about the team and services.
+- `Media (media.html)` – Video showcase, audio sample, and studio location.
+- `Contact (contact.html)` – Contact form with validation and accessibility improvements.
+- `css/styles.css` - Stylesheet 
+- `images/` folder - Images
+- `media/` folder - Video/Audio files
 
-## Your Task
+## Issues Found
 
-Review the provided code carefully and:
-1. Identify and fix all HTML and CSS errors
-2. Complete all missing advanced requirements
-3. Add required media elements (video, audio, iframe)
-4. Implement flexbox and CSS Grid layouts
-5. Add CSS effects, transforms, transitions, and animations
-6. Expand selector usage and add pseudo-classes
-7. Improve code quality and organisation
-8. Test across multiple browsers and validate all code
+The starter code contained several problems:
 
-## Getting Started
+### 1.  HTML and CSS errors
+  - Missing semantic HTML elements (`header`, `main`, `section`, `footer`)
+  - Missing `<meta>` tags and accessibility attributes
+  - Missing `<title>` validation requirement
+  - Images missing `alt` attributes
+  - Improper `<video>` setup (missing controls and fallback)
+  - Missing audio and iframe elements
+  - Form missing labels and proper input types
+    
+### 2. CSS Issues
+  - No Flexbox layouts
+  - No CSS Grid layout
+  - No responsive design
+  - No pseudo-classes
+  - No transitions or animations
+  - Low colour contrast in hero section
+  - Poor navigation styling
+    
+### 3.Structural Issues
+  - Missing service items
+  - Missing portfolio grid
+  - Media elements incomplete
+  - No accessibility considerations
 
-1. Review all HTML and CSS files thoroughly
-2. Run HTML through W3C Validator to identify errors
-3. Run CSS through W3C CSS Validator
-4. Identify missing advanced features (flexbox, grid, animations, etc.)
-5. Test in multiple browsers
-6. Fix all issues and complete missing requirements
 
-## Notes
+## Fixes and Implementations
 
-- You will need to add your own video and audio files to the `media/` folder
-- You will need to add images to the `images/` folder
-- The starter code intentionally has issues for you to discover and fix
-- Advanced features like flexbox, grid, animations are missing or incomplete
-- Refer to the project requirements document for all specifications
+The project was improved by:
 
-Good luck!
+  - Adding semantic HTML5 elements (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`)
+  - Adding required metadata (`charset`, `viewport`, `description`, `author`)
+  - Fixing validation errors and removing invalid attributes
+  - Improving media elements with fallback text and multiple sources
+  - Implementing a complete contact form with validation
+  - Adding ARIA labels and descriptive alt text
+  - Adding Maps iframe for the studio location
+  - Implementing responsive layouts and styling improvements
+
+## Screenshots
+
+- All four pages (desktop view)
+- Contact form with validation
+- Media elements (video, audio, iframe)
+- Flexbox layout demonstration
+- CSS Grid gallery layout
+- Browser compatibility comparison
+- Two pages in mobile view
+- Animations or hover effects
+
+
+

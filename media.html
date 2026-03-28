@@ -1,50 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Media Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch and listen to Media Production Co. sample videos, audio tracks, and find our studio location.">
+    <meta name="author" content="Media Production Co.">
+    <title>Media Gallery | Media Production Co.</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>Media Gallery</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Video Showcase</h2>
-        
-        <!-- First video - missing controls and fallback -->
-        <video src="media/sample1.mp4" width="640" height="360"></video>
-        
-        <!-- Second video missing entirely -->
-    </div>
-    
-    <div>
-        <h2>Audio Sample</h2>
-        <!-- Audio element missing completely -->
-        <p>Listen to our audio production quality.</p>
-    </div>
-    
-    <div>
-        <h2>Location</h2>
-        <!-- iframe missing completely -->
-        <p>Visit our studio at 123 Media Street</p>
-    </div>
-    
-    <div>
-        <h2>Client Testimonials</h2>
-        <img src="images/client1.jpg">
-        <img src="images/client2.jpg">
-        <!-- Missing figure/figcaption semantic markup -->
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+
+    <header class="top">
+        <h1>Media Production Co.</h1>
+        <nav class="nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html" class="active" aria-current="page">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="media-section" aria-labelledby="video-heading">
+            <h2 id="video-heading">Video Showcase</h2>
+
+            <figure>
+                <video
+                    controls
+                    width="100%"
+                    poster="images/video-thumb1.jpg"
+                    aria-label="Corporate branding video reel">
+                    <source src="media/sample1.mp4" type="video/mp4">
+                    <source src="media/sample1.webm" type="video/webm">
+
+                    <p>Your browser does not support HTML5 video.
+                        <a href="media/sample1.mp4">Download the corporate reel (MP4)</a>.
+                    </p>
+                </video>
+                <figcaption>Corporate Branding Reel — 2025 Showreel</figcaption>
+            </figure>
+
+            <figure>
+                <video
+                    controls
+                    width="100%"
+                    poster="images/video-thumb2.jpg"
+                    class="second-video"
+                    aria-label="Behind the scenes production footage">
+                    <source src="media/sample2.mp4" type="video/mp4">
+                    <source src="media/sample2.webm" type="video/webm">
+
+                    <p>Your browser does not support HTML5 video.
+                        <a href="media/sample2.mp4">Download the behind-the-scenes footage (MP4)</a>.
+                    </p>
+                </video>
+                <figcaption>Behind the Scenes — Music Video Production</figcaption>
+            </figure>
+        </section>
+
+        <section class="media-section" aria-labelledby="audio-heading">
+            <h2 id="audio-heading">Audio Sample</h2>
+            <figure>
+                <audio controls aria-label="Sample podcast episode">
+                    <source src="media/sample-audio.mp3" type="audio/mpeg">
+                    <source src="media/sample-audio.ogg" type="audio/ogg">
+
+                    <p>Your browser does not support HTML5 audio.
+                        <a href="media/sample-audio.mp3">Download the audio sample (MP3)</a>.
+                    </p>
+                </audio>
+                <figcaption>Sample Podcast Episode — "Storytelling in Film"</figcaption>
+            </figure>
+        </section>
+
+        <section class="media-section" aria-labelledby="location-heading">
+            <h2 id="location-heading">Our Studio Location</h2>
+            <!--
+                iframe requirements met:
+                - title: required for accessibility and W3C validation
+                - referrerpolicy: good practice for embedded third-party content
+                - loading="lazy": defers load for performance
+                - allowfullscreen: user comfort
+            -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019394455645!2d-122.41941568468166!3d37.77492977975944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580989a91a7d7%3A0x7dc6e5e75c9fcc5f!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1600000000000"
+                height="350"
+                title="Map showing Media Production Co. studio location in San Francisco"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+            <p>Visit us at our downtown studio — open Monday to Friday, 9am to 6pm.</p>
+        </section>
+
+    </main>
+
+    <footer class="bottom">
+        <p>&copy; 2026 Media Production Co. All rights reserved.</p>
+        <address>
+            <p>Contact us for more samples: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+        </address>
+    </footer>
+
 </body>
 </html>

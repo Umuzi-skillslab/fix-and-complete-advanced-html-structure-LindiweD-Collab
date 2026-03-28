@@ -1,33 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Media Production</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Media Production Services — video, audio, and multimedia solutions for businesses of all sizes.">
+    <meta name="author" content="Media Production Co.">
+    <title>Media Production | Home</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>Media Production Company</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div class="hero">
-        <h2>Professional Media Production Services</h2>
-        <p>We create stunning visual content for your business needs.</p>
-    </div>
-    
-    <div class="content">
-        <h2>What We Do</h2>
-        <p>Video production, audio recording, and multimedia solutions for businesses of all sizes.</p>
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-        <p>Phone: 555-0123</p>
-    </div>
+
+    <header class="top">
+        <h1>Media Production Co.</h1>
+        <nav class="nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" aria-label="Hero banner">
+            <h2>Professional Media Production Services</h2>
+            <p>We create stunning visual content for your business needs.</p>
+            <a href="contact.html" class="cta-btn">Get a Quote</a>
+        </section>
+
+        <section class="content" aria-labelledby="what-we-do">
+            <article>
+                <h2 id="what-we-do">What We Do</h2>
+                <p>Video production, audio recording, and multimedia solutions for businesses of all sizes. Our experienced team delivers high-quality content that elevates your brand.</p>
+                <p>From concept to final cut, we handle every stage of production with precision and creativity.</p>
+            </article>
+        </section>
+
+        <section class="portfolio-section" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Work</h2>
+            <div class="grid-gallery">
+
+                <figure>
+                    <img src="images/work1.jpg" alt="Cinematography project showing camera equipment on set">
+                    <figcaption>Project Alpha — Corporate Branding Campaign</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work2.jpg" alt="Audio mixing console in a professional recording studio">
+                    <figcaption>Project Beta — Podcast Series Production</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work3.jpg" alt="Post-production editing suite with multiple monitors">
+                    <figcaption>Project Gamma — Music Video Direction</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work4.jpg" alt="Live event filming with broadcast cameras">
+                    <figcaption>Project Delta — Live Event Coverage</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <aside class="content" aria-label="Company highlights">
+            <article>
+                <h2>Why Choose Us?</h2>
+                <p>Over 10 years of industry experience, award-winning productions, and a dedicated team that treats every project as our most important one.</p>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer class="bottom">
+        <p>&copy; 2026 Media Production Co. All rights reserved.</p>
+        <address>
+            <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+            <p>Phone: <a href="tel:0720123456">072-012-3456</a></p>
+        </address>
+    </footer>
+
 </body>
 </html>

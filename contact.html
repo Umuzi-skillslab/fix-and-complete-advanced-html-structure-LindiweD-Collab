@@ -1,40 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Media Production Co. Tell us about your project and we'll get back to you within 24 hours.">
+    <meta name="author" content="Media Production Co.">
+    <title>Contact Us | Media Production Co.</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>Contact Us</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <!-- Form with multiple errors -->
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, proper input types (email, tel), validation attributes -->
-            <!-- Missing: radio buttons, checkboxes, select/dropdown, date/number inputs -->
-            <!-- Missing: fieldset for grouping -->
-            
-            <button>Submit</button>
-        </form>
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+
+    <header class="top">
+        <h1>Media Production Co.</h1>
+        <nav class="nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="contact-form-area" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get In Touch</h2>
+
+            <form action="#" method="post" novalidate>
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="name">Full Name: <span aria-hidden="true">*</span></label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Leon Dube"
+                        required
+                        minlength="3"
+                        maxlength="80"
+                        autocomplete="name">
+
+                    <label for="email">Email Address: <span aria-hidden="true">*</span></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        maxlength="120"
+                        autocomplete="email">
+
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="072-012-3456"
+                        maxlength="15"
+                        autocomplete="tel">
+
+                    <label for="website">Your Website (optional):</label>
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="https://yourwebsite.com"
+                        maxlength="200"
+                        autocomplete="url">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project Details</legend>
+
+                    <label for="service">Service Required: <span aria-hidden="true">*</span></label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>— Select a service —</option>
+                        <option value="video">Video Production</option>
+                        <option value="audio">Audio Recording</option>
+                        <option value="post">Post-Production</option>
+                        <option value="photography">Photography</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="budget">Estimated Budget (USD):</label>
+                    <input
+                        type="number"
+                        id="budget"
+                        name="budget"
+                        placeholder="5000"
+                        min="500"
+                        max="500000"
+                        step="100">
+
+                    <label for="deadline">Project Deadline:</label>
+                    <input
+                        type="date"
+                        id="deadline"
+                        name="deadline"
+                        min="2026-01-01"
+                        max="2030-12-31">
+
+                    <p id="pref-label" style="font-weight:500;margin-top:1rem;margin-bottom:0.3rem;">
+                        Preferred Contact Method: <span aria-hidden="true">*</span>
+                    </p>
+                    <div class="radio-group" role="radiogroup" aria-labelledby="pref-label">
+                        <label>
+                            <input type="radio" name="pref" value="email" required checked>
+                            Email
+                        </label>
+                        <label>
+                            <input type="radio" name="pref" value="phone">
+                            Phone
+                        </label>
+                        <label>
+                            <input type="radio" name="pref" value="video-call">
+                            Video Call
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message &amp; Preferences</legend>
+
+                    <label for="msg">Your Message: <span aria-hidden="true">*</span></label>
+                    <textarea
+                        id="msg"
+                        name="msg"
+                        placeholder="Tell us about your project — scope, timeline, vision..."
+                        required
+                        minlength="20"
+                        maxlength="2000"></textarea>
+
+                    <p style="font-weight:500;margin-top:1rem;margin-bottom:0.3rem;">
+                        I am interested in: (select all that apply)
+                    </p>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="interest" value="corporate">
+                            Corporate &amp; commercial productions
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interest" value="events">
+                            Live event coverage
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interest" value="social">
+                            Social media content
+                        </label>
+                        <label>
+                            <input type="checkbox" name="news" value="yes">
+                            Subscribe to our newsletter
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <p style="font-size:0.85rem;color:#666;margin-bottom:0.5rem;">
+                    <span aria-hidden="true">*</span> Required fields
+                </p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+        </section>
+
+        <aside class="content" aria-label="Alternative contact information">
+            <article>
+                <h2>Other Ways to Reach Us</h2>
+                <address>
+                    <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+                    <p>Phone: <a href="tel:0720123456">072-012-3456</a></p>
+                    <p>123 Studio Lane, Sandton, ZA 2094</p>
+                </address>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer class="bottom">
+        <p>&copy; 2026 Media Production Co. All rights reserved.</p>
+        <address>
+            <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+        </address>
+    </footer>
+
 </body>
 </html>

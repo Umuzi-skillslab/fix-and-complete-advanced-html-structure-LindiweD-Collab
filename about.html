@@ -1,49 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Media Production Co. team and learn about our specialised video, audio, and post-production services.">
+    <meta name="author" content="Media Production Co.">
+    <title>About Us | Media Production Co.</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>About Our Services</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Our Team</h2>
-        <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
-    
-    <div>
-        <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
-        </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
-        <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+
+    <header class="top">
+        <h1>Media Production Co.</h1>
+        <nav class="nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="team-intro" aria-labelledby="team-heading">
+            <h2 id="team-heading">Our Team</h2>
+            <p>We are a team of experienced media professionals dedicated to creating high-quality content that connects brands with audiences.</p>
+        </section>
+
+        <section class="services-flex" aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Specialised Services</h2>
+            <div class="flex-container">
+
+                <article class="service-card">
+                    <h3>Video Production</h3>
+                    <p>Professional video creation for corporate and creative projects. From scripting to final delivery, we handle it all.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Audio Recording</h3>
+                    <p>Studio-quality audio production and editing services. Podcasts, voiceovers, soundtracks, and more.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Post-Production</h3>
+                    <p>Color grading, sound mixing, and visual effects to polish your project and make it shine.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="portfolio-section" aria-labelledby="portfolio-heading">
+            <h2 id="portfolio-heading">Our Portfolio</h2>
+            <div class="grid-gallery">
+
+                <figure>
+                    <img src="images/work1.jpg" alt="Cinematography project on a corporate set">
+                    <figcaption>Project Alpha — Corporate Branding</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work2.jpg" alt="Audio mixing console with multiple faders">
+                    <figcaption>Project Beta — Podcast Series</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work3.jpg" alt="Non-linear video editing suite">
+                    <figcaption>Project Gamma — Music Video</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work4.jpg" alt="Drone footage of a coastal landscape">
+                    <figcaption>Project Delta — Aerial Photography</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work5.jpg" alt="Lighting setup for a product shoot">
+                    <figcaption>Project Epsilon — Product Campaign</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/work6.jpg" alt="Documentary crew filming in the field">
+                    <figcaption>Project Zeta — Documentary Feature</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <aside class="content" aria-label="Awards and credentials">
+            <article>
+                <h2>Awards &amp; Recognition</h2>
+                <p>Our productions have won regional and national awards, recognised for excellence in cinematography, storytelling, and technical quality.</p>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer class="bottom">
+        <p>&copy; 2026 Media Production Co. All rights reserved.</p>
+        <address>
+            <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+        </address>
+    </footer>
+
 </body>
 </html>

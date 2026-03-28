@@ -1,6 +1,6 @@
 # Media Production Website
 ## Overview
-This project is a multi-page responsive website for a fictional Media Production Company. The purpose of the site is to present the company’s services, showcase media content (video and audio), provide company information, and allow visitors to contact the business through a structured form.
+This project is a multi-page responsive website for a fictional Media Production Company. The project involved debugging a 70%-complete starter codebase, fixing all semantic and validation errors, and implementing advanced layout, animation, and accessibility features — without JavaScript.  The website represents a fictional media production company offering video production, audio recording, and post-production services. It consists of four fully linked pages: a home page, an about/services page, a media gallery, and a contact form. The site demonstrates professional-grade HTML structure, responsive CSS layouts using Flexbox and Grid, CSS animations and transforms, embedded media elements, and accessible form design.
 
 The website includes four pages:
 
@@ -13,59 +13,53 @@ The website includes four pages:
 - `css/styles.css` - Stylesheet 
 - `images/` folder - Images
 - `media/` folder - Video/Audio files
+  
+---
 
 ## Issues Found
 
 The starter code contained several problems:
-
-### 1.  HTML and CSS errors
-  - Missing semantic HTML elements (`header`, `main`, `section`, `footer`)
-  - Missing `<meta>` tags and accessibility attributes
-  - Missing `<title>` validation requirement
-  - Images missing `alt` attributes
-  - Improper `<video>` setup (missing controls and fallback)
-  - Missing audio and iframe elements
-  - Form missing labels and proper input types
-    
-### 2. CSS Issues
-  - No Flexbox layouts
-  - No CSS Grid layout
-  - No responsive design
-  - No pseudo-classes
-  - No transitions or animations
-  - Low colour contrast in hero section
-  - Poor navigation styling
-    
-### 3.Structural Issues
-  - Missing service items
-  - Missing portfolio grid
-  - Media elements incomplete
-  - No accessibility considerations
-
+ 
+- `<meta name="description">` missing on 3 of 4 pages
+- `<iframe>` had no `title` attribute — a W3C validation error and accessibility failure
+- Second `<video>` element had no `poster` attribute
+- `contact.html` had no `<footer>` element
+- Only 3 `<figure>/<figcaption>` image pairs (6+ required)
+- Only 2 radio button options (3 minimum required)
+- `type="number"` and `type="url"` inputs were absent entirely
+- `min`, `max`, and `maxlength` validation attributes missing from form
+- No ID selector (`#`) used anywhere in the CSS
+- No adjacent sibling selector (`+`) used
+- `:focus`, `:nth-child()`, `:first-child`, `:last-child`, `:not()` pseudo-classes all absent
+- `grid-template-rows` never defined; no grid positioning (`grid-column: span`) used
+- `align-items` used only once; only 2 flexbox layouts instead of 3
+- `@keyframes slideIn` had only 2 stops (`from`/`to`) instead of 3+
+- Only 2 CSS transforms on the same element; a third independent transform was missing
+- No gradient text effect; only `text-shadow` used
+- Only 1 named `@keyframes` animation; second was missing
+- No `<address>`, `<aside>`, `aria-label`, `aria-labelledby`, or `aria-current` attributes used anywhere
+ 
+See `design/issues-identified.md` for the complete line-by-line inventory.
+ 
+---
 
 ## Fixes and Implementations
 
-The project was improved by:
-
-  - Adding semantic HTML5 elements (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`)
-  - Adding required metadata (`charset`, `viewport`, `description`, `author`)
-  - Fixing validation errors and removing invalid attributes
-  - Improving media elements with fallback text and multiple sources
-  - Implementing a complete contact form with validation
-  - Adding ARIA labels and descriptive alt text
-  - Adding Maps iframe for the studio location
-  - Implementing responsive layouts and styling improvements
-
-## Screenshots
-
-- All four pages (desktop view)
-- Contact form with validation
-- Media elements (video, audio, iframe)
-- Flexbox layout demonstration
-- CSS Grid gallery layout
-- Browser compatibility comparison
-- Two pages in mobile view
-- Animations or hover effects
+Every HTML page was restructured with the complete set of semantic elements. Metadata was completed on all four pages. The CSS was rebuilt section-by-section to satisfy every quantitative requirement. Specific changes:
+ 
+- Added `<meta name="description">` and `<meta name="author">` to all pages
+- Added `title`, `referrerpolicy`, `loading="lazy"`, and `allowfullscreen` to the `<iframe>`
+- Added `poster` to the second `<video>` element and a WebM fallback source to both videos
+- Added an OGG fallback source to the `<audio>` element
+- Added `<footer>` to `contact.html`
+- Expanded portfolio to 6+ `<figure>/<figcaption>` image pairs across the site
+- Added a third radio option (Video Call) to the contact form
+- Added `type="url"` and `type="number"` inputs with `min`, `max`, `step` attributes
+- Added `maxlength` to all text inputs
+- Added `<aside>` sections with `<address>` elements to all four pages, including the studio address (123 Studio Lane, Sandton, ZA 2094) and phone number (072-012-3456)
+- Added `aria-label`, `aria-labelledby`, and `aria-current` to navigation and sections
+ 
+---
 
 ## Flexbox Layouts
  
@@ -163,15 +157,11 @@ project/
 ├── images/
 │   ├── hero.jpg
 │   ├── work1.jpg … work6.jpg
-│   ├── video-thumb1.jpg
-│   └── video-thumb2.jpg
+│   
 ├── media/
 │   ├── sample1.mp4
-│   ├── sample1.webm
 │   ├── sample2.mp4
-│   ├── sample2.webm
-│   ├── sample-audio.mp3
-│   └── sample-audio.ogg
+│   
 └── design/
     ├── wireframe.html
     └── issues-identified.md
